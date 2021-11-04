@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  .logo {
+    max-width: 145px;
+    img {
+      width: 100%;
+    }
+  }
+  .nav {
+    &_list {
+      display: flex;
+    }
+    &_link {
+      color: $color-primary;
+      margin: 0 5px;
+
+      &.active {
+        text-decoration: underline;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  @include desktops {
+    .logo {
+      max-width: 210px;
+    }
+
+    .nav {
+      &_link {
+        margin: 0 25px;
+        transition: all 0.2s;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
