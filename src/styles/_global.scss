@@ -1,0 +1,27 @@
+body {
+    font-family: $font-family;
+    font-size: 14px;
+    line-height: 1.2;
+
+    @include desktops {
+        font-size: 16px;
+    }
+}
+
+.container {
+    padding: 0 20px;
+
+    @include tablets {
+        padding: 0 40px;
+    }
+
+    @include desktops {
+        max-width: 1320px;
+        margin: 0 auto ;
+    }
+}
+
+a {
+    color: $color-primary;
+    display: inline-block;
+}
