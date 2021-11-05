@@ -30,6 +30,15 @@
       }
     }
   }
+
+  @include tablets {
+    .nav {
+      &_link {
+        margin: 0 15px;
+      }
+    }
+  }
+
   @include desktops {
     .logo {
       max-width: 210px;

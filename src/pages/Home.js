@@ -34,7 +34,11 @@ class Home extends Component {
             <Banner />
             <ul className="apartment_list">
               {data?.map((apartment) => (
-                <Apartment key={apartment.id} title={apartment.title} />
+                <Apartment
+                  key={apartment.id}
+                  title={apartment.title}
+                  cover={apartment.cover}
+                />
               ))}
             </ul>
           </div>
