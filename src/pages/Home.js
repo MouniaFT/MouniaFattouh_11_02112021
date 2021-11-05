@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
+import Apartment from '../components/Apartment'
 
 class Home extends Component {
   constructor(props) {
@@ -31,6 +32,11 @@ class Home extends Component {
         <main>
           <div className="container">
             <Banner />
+            <ul className="apartment_list">
+              {data?.map((apartment) => (
+                <Apartment key={apartment.id} title={apartment.title} />
+              ))}
+            </ul>
           </div>
         </main>
       </div>

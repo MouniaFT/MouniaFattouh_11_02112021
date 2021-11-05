@@ -22,6 +22,7 @@
     font-weight: 500;
     color: $color-white;
     max-width: 217px;
+    position: relative;
   }
 
   @include tablets {
