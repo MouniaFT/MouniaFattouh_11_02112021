@@ -8,7 +8,7 @@ class Apartment extends Component {
   render() {
     const { title, cover } = this.props
     return (
-      <li className="apartment">
+      <li>
         <div className="apartment_img">
           <img src={cover} alt={title} />
         </div>

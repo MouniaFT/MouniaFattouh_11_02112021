@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import logo from '../images/logo.svg'
+import { Link } from 'react-router-dom'
 
 class Header extends Component {
   render() {
@@ -11,8 +12,12 @@ class Header extends Component {
           </div>
           <nav className="nav">
             <ul className="nav_list">
-              <li className="nav_link active">Accueil</li>
-              <li className="nav_link">A Propos</li>
+              <Link to="/" className="nav_link active">
+                Accueil
+              </Link>
+              <Link to="/Apropos" className="nav_link">
+                A Propos
+              </Link>
             </ul>
           </nav>
         </div>

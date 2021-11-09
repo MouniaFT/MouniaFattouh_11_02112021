@@ -2,29 +2,16 @@ import { Component } from 'react'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 import Apartment from '../components/Apartment'
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      data: [],
-    }
-  }
-
-  componentDidMount() {
-    fetch(
-      'https://raw.githubusercontent.com/MouniaFT/MouniaFattouh_11_02112021/main/public/json/data.json'
-    )
-      .then((res) => res.json())
-      .then((result) => {
-        this.setState({
-          data: result,
-        })
-      })
+    this.state = {}
   }
 
   render() {
-    const { data } = this.state
+    const { data } = this.props
 
     return (
       <div>
@@ -34,11 +21,17 @@ class Home extends Component {
             <Banner />
             <ul className="apartment_list">
               {data?.map((apartment) => (
-                <Apartment
+                <Link
                   key={apartment.id}
-                  title={apartment.title}
-                  cover={apartment.cover}
-                />
+                  to={`/ApartmentPage/${apartment.id}`}
+                  className="apartment"
+                >
+                  <Apartment
+                    key={apartment.id}
+                    title={apartment.title}
+                    cover={apartment.cover}
+                  />
+                </Link>
               ))}
             </ul>
           </div>
