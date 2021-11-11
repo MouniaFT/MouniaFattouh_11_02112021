@@ -1,0 +1,33 @@
+.aproposPage {
+  .banner {
+    background: url('../../images/bg-apropos.png') no-repeat center bottom /
+      cover;
+    height: 223px;
+    &_title {
+      display: none;
+    }
+  }
+  &_collapse {
+    padding: 10px 0;
+    .collapse {
+      margin: 20px 0;
+    }
+  }
+
+  @include tablets {
+    &_collapse {
+      max-width: 920px;
+      margin: 0 auto;
+      .collapse {
+        margin: 30px 0;
+      }
+    }
+  }
+
+  @include desktops {
+    &_collapse {
+      max-width: 1023px;
+      margin: 0 auto;
+    }
+  }
+}
