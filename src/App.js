@@ -38,7 +38,7 @@ class App extends Component {
           <Route
             exact
             path="/ApartmentPage/:id"
-            render={(props) => <ApartmentPage {...props} />}
+            render={(props) => <ApartmentPage {...props} data={data} />}
           />
           <Route>
             <Error404 />
