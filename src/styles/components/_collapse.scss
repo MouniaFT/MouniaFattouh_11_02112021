@@ -1,0 +1,61 @@
+.collapse {
+  background-color: $color-grey;
+  border-radius: 5px;
+  &_header {
+    color: $color-white;
+    font-weight: 500;
+    background-color: $color-primary;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_text {
+    color: $color-primary;
+    font-size: 12px;
+    padding: 20px 10px 10px 10px;
+  }
+
+  &_arrow {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    img {
+      width: 9px;
+    }
+  }
+
+  @include tablets {
+    border-radius: 10px;
+    &_header {
+      padding: 8px 15px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+
+    &_text {
+      font-size: 16px;
+      padding: 30px 12px 30px 15px;
+    }
+
+    &_arrow {
+      img {
+        width: 16px;
+      }
+    }
+  }
+
+  @include desktops {
+    &_header {
+      padding: 13px 20px;
+      font-size: 18px;
+    }
+
+    &_text {
+      font-size: 18px;
+      padding: 40px 12px 40px 20px;
+    }
+  }
+}
