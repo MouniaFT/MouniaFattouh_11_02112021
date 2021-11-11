@@ -43,7 +43,7 @@ class App extends Component {
             path="/ApartmentPage/:id"
             render={(props) => <ApartmentPage {...props} data={data} />}
           />
-          <Route>
+          <Route path="*">
             <Error404 />
           </Route>
         </Switch>

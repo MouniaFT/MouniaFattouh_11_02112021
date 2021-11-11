@@ -1,0 +1,45 @@
+.errorPage {
+  color: $color-primary;
+  padding: 180px 0;
+  text-align: center;
+  &_404 {
+    font-weight: 700;
+    font-size: 96px;
+  }
+
+  &_text {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 11px 0 133px;
+  }
+
+  &_link {
+    font-weight: 500px;
+    text-decoration: underline;
+  }
+
+  @include tablets {
+    &_404 {
+      font-size: 180px;
+    }
+
+    &_text {
+      font-size: 28px;
+      margin: 50px 0 150px;
+    }
+  }
+
+  @include desktops {
+    &_404 {
+      font-size: 288px;
+    }
+
+    &_text {
+      font-size: 36px;
+      margin: 66px 0 182px;
+    }
+    &_link {
+      font-size: 18px;
+    }
+  }
+}
