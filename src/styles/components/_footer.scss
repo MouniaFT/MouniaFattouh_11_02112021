@@ -1,0 +1,26 @@
+.footer {
+  background-color: $color-black;
+  padding: 60px 0;
+  text-align: center;
+
+  .copyright {
+    color: $color-white;
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+
+  @include tablets {
+    padding: 60px 0 29px;
+
+    .copyright {
+      font-size: 18px;
+    }
+  }
+
+  @include desktops {
+    .copyright {
+      font-size: 24px;
+    }
+  }
+}

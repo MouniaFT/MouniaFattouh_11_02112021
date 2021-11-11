@@ -4,6 +4,8 @@ import Home from './pages/Home'
 import Apropos from './pages/Apropos'
 import ApartmentPage from './pages/ApartmentPage'
 import Error404 from './pages/Error404'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 class App extends Component {
   constructor(props) {
@@ -28,6 +30,7 @@ class App extends Component {
     const { data } = this.state
     return (
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/">
             <Home data={data} />
@@ -44,6 +47,7 @@ class App extends Component {
             <Error404 />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     )
   }

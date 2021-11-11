@@ -19,7 +19,7 @@ class Collapse extends Component {
   }
 
   render() {
-    const { title, content, list } = this.props
+    const { title, content } = this.props
     return (
       <div className="collapse">
         <div className="collapse_header">
