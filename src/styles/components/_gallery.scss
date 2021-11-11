@@ -54,5 +54,16 @@
         width: 47px;
       }
     }
+
+    &_counter {
+      display: block;
+      position: absolute;
+      color: $color-white;
+      font-size: 18px;
+      font-weight: 500;
+      bottom: 25px;
+      right: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

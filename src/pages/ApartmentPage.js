@@ -1,6 +1,8 @@
 import { Component } from 'react'
 import Header from '../components/Header'
 import Gallery from '../components/Gallery'
+import Tag from '../components/Tag'
+import Profil from '../components/Profil'
 
 class ApartmentPage extends Component {
   constructor(props) {
@@ -25,8 +27,14 @@ class ApartmentPage extends Component {
                     pictures={apartment.pictures}
                     title={apartment.title}
                   />
-
-                  <h2>{apartment.title}</h2>
+                  <h2 className="apartmentPage_title">{apartment.title}</h2>
+                  <p className="apartmentPage_location">{apartment.location}</p>
+                  <ul className="apartmentPage_tags">
+                    {apartment.tags.map((tag) => (
+                      <Tag tag={tag} />
+                    ))}
+                  </ul>
+                  <Profil host={apartment.host} />
                 </>
               ))}
           </div>

@@ -1,0 +1,30 @@
+.profil {
+  display: flex;
+  align-items: center;
+  &_name {
+    color: $color-primary;
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  &_img {
+    img {
+      border-radius: 50%;
+      width: 32px;
+      object-fit: cover;
+    }
+  }
+
+  @include tablets {
+    &_name {
+      font-size: 18px;
+    }
+
+    &_img {
+      img {
+        width: 64px;
+      }
+    }
+  }
+}
