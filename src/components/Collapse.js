@@ -35,8 +35,8 @@ class Collapse extends Component {
         </div>
         {this.state.isOpen === true && (
           <ul className="collapse_text">
-            {content?.map((element) => (
-              <li>{element}</li>
+            {content?.map((element, index) => (
+              <li key={index}>{element}</li>
             ))}
           </ul>
         )}
