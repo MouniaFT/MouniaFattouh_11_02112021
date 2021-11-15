@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  HashRouter,
+  Route,
+  Switch,
+} from 'react-router-dom'
 import { Component } from 'react'
 import Home from './pages/Home'
 import Apropos from './pages/Apropos'
@@ -29,7 +34,7 @@ class App extends Component {
   render() {
     const { data } = this.state
     return (
-      <Router>
+      <HashRouter>
         <Header />
         <Switch>
           <Route exact path="/">
@@ -48,7 +53,7 @@ class App extends Component {
           </Route>
         </Switch>
         <Footer />
-      </Router>
+      </HashRouter>
     )
   }
 }
