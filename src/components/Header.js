@@ -15,7 +15,7 @@ class Header extends Component {
               <Link to="/" className="nav_link active">
                 Accueil
               </Link>
-              <Link to="/Apropos" className="nav_link">
+              <Link to="/apropos" className="nav_link">
                 A Propos
               </Link>
             </ul>

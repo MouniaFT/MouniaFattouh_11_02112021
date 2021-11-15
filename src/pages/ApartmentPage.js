@@ -2,7 +2,9 @@ import { Component } from 'react'
 import Gallery from '../components/Gallery'
 import Tag from '../components/Tag'
 import Profil from '../components/Profil'
+import StarRating from '../components/StarRating'
 import Collapse from '../components/Collapse'
+import { Redirect } from 'react-router-dom'
 
 class ApartmentPage extends Component {
   constructor(props) {
@@ -11,35 +13,47 @@ class ApartmentPage extends Component {
   }
   render() {
     const { data } = this.props
+    const apartment = data?.find(
+      (apartment) => apartment.id === this.props.match.params.id
+    )
+
+    if (data.length === 0) {
+    }
+    if (data.length > 0 && !apartment) {
+      return <Redirect to="/404" />
+    }
     return (
       <main className="apartmentPage">
         <div className="container">
-          {data
-            ?.filter((apartment) => apartment.id === this.props.match.params.id)
-            .map((apartment) => (
-              <>
-                <Gallery
-                  key={apartment.id}
-                  pictures={apartment.pictures}
-                  title={apartment.title}
-                />
-                <h2 className="apartmentPage_title">{apartment.title}</h2>
-                <p className="apartmentPage_location">{apartment.location}</p>
+          <>
+            <Gallery
+              key={apartment?.id}
+              pictures={apartment?.pictures}
+              title={apartment?.title}
+            />
+            <div className="apartmentPage_info">
+              <div>
+                <h2 className="apartmentPage_title">{apartment?.title}</h2>
+                <p className="apartmentPage_location">{apartment?.location}</p>
                 <ul className="apartmentPage_tags">
-                  {apartment.tags.map((tag, index) => (
+                  {apartment?.tags.map((tag, index) => (
                     <Tag key={index} tag={tag} />
                   ))}
                 </ul>
-                <Profil host={apartment.host} />
-                <div className="apartmentPage_collapse">
-                  <Collapse
-                    title="Description"
-                    content={apartment.description}
-                  />
-                  <Collapse title="Équipement" content={apartment.equipments} />
-                </div>
-              </>
-            ))}
+              </div>
+              <div className="apartmentPage_profil">
+                <StarRating rating={apartment?.rating} />
+                <Profil host={apartment?.host} />
+              </div>
+            </div>
+            <div className="apartmentPage_collapse">
+              <Collapse
+                title="Description"
+                content={[apartment?.description]}
+              />
+              <Collapse title="Équipement" content={apartment?.equipments} />
+            </div>
+          </>
         </div>
       </main>
     )

@@ -20,6 +20,7 @@ class Collapse extends Component {
 
   render() {
     const { title, content } = this.props
+
     return (
       <div className="collapse">
         <div className="collapse_header">
@@ -32,10 +33,12 @@ class Collapse extends Component {
             )}
           </button>
         </div>
-        {this.state.isOpen === true ? (
-          <p className="collapse_text">{content}</p>
-        ) : (
-          ''
+        {this.state.isOpen === true && (
+          <ul className="collapse_text">
+            {content?.map((element) => (
+              <li>{element}</li>
+            ))}
+          </ul>
         )}
       </div>
     )

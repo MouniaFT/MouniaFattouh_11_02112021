@@ -20,7 +20,7 @@ class Home extends Component {
             {data?.map((apartment) => (
               <Link
                 key={apartment.id}
-                to={`/ApartmentPage/${apartment.id}`}
+                to={`/apartmentpage/${apartment.id}`}
                 className="apartment"
               >
                 <Apartment

@@ -27,23 +27,27 @@ class Gallery extends Component {
     return (
       <div className="gallery">
         <div className="gallery_img">
-          <img src={pictures[this.state.apartmentIndex]} alt={title} />
+          <img src={pictures?.[this.state.apartmentIndex]} alt={title} />
         </div>
-        <button
-          className="gallery_arrow gallery_arrow--left"
-          onClick={this.prevArrow}
-        >
-          <img src={leftArrow} alt="leftArrow" />
-        </button>
-        <button
-          className="gallery_arrow gallery_arrow--right"
-          onClick={this.nextArrow}
-        >
-          <img src={rightArrow} alt="rightArrow" />
-        </button>
-        <span className="gallery_counter">
-          {this.state.apartmentIndex + 1}/{pictures.length}
-        </span>
+        {pictures?.length > 1 && (
+          <>
+            <button
+              className="gallery_arrow gallery_arrow--left"
+              onClick={this.prevArrow}
+            >
+              <img src={leftArrow} alt="leftArrow" />
+            </button>
+            <button
+              className="gallery_arrow gallery_arrow--right"
+              onClick={this.nextArrow}
+            >
+              <img src={rightArrow} alt="rightArrow" />
+            </button>
+            <span className="gallery_counter">
+              {this.state.apartmentIndex + 1}/{pictures?.length}
+            </span>
+          </>
+        )}
       </div>
     )
   }

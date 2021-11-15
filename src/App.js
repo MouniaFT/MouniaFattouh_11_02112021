@@ -35,15 +35,15 @@ class App extends Component {
           <Route exact path="/">
             <Home data={data} />
           </Route>
-          <Route exact path="/Apropos">
+          <Route exact path="/apropos">
             <Apropos />
           </Route>
           <Route
             exact
-            path="/ApartmentPage/:id"
+            path="/apartmentpage/:id"
             render={(props) => <ApartmentPage {...props} data={data} />}
           />
-          <Route path="*">
+          <Route exact path="*">
             <Error404 />
           </Route>
         </Switch>

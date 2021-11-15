@@ -9,9 +9,9 @@ class Profil extends Component {
     const { host } = this.props
     return (
       <div className="profil">
-        <p className="profil_name">{host.name}</p>
+        <p className="profil_name">{host?.name}</p>
         <div className="profil_img">
-          <img src={host.picture} alt="profil" />
+          <img src={host?.picture} alt="profil" />
         </div>
       </div>
     )

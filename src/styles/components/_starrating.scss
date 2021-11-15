@@ -1,0 +1,13 @@
+.starRating {
+  @include tablets {
+    img {
+      width: 20px;
+    }
+  }
+
+  @include desktops {
+    img {
+      width: 30px;
+    }
+  }
+}
