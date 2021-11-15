@@ -1,8 +1,8 @@
 {
   "name": "my-react-app",
-  "homepage": "https://github.com/MouniaFT/",
+  "homepage": "https://github.com/MouniaFT/MouniaFattouh_11_02112021.git",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
