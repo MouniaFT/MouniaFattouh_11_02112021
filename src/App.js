@@ -34,7 +34,7 @@ class App extends Component {
   render() {
     const { data } = this.state
     return (
-      <HashRouter base="/">
+      <HashRouter>
         <Header />
         <Switch>
           <Route exact path="/">
