@@ -7,9 +7,9 @@ class Header extends Component {
     return (
       <header className="header">
         <div className="container">
-          <div className="logo">
+          <Link to="/" className="logo">
             <img src={logo} alt="logo" />
-          </div>
+          </Link>
           <nav className="nav">
             <ul className="nav_list">
               <Link to="/" className="nav_link ">
