@@ -23,9 +23,9 @@ class Collapse extends Component {
 
     return (
       <div className="collapse">
-        <div className="collapse_header">
+        <div className="collapse_header" onClick={this.toggleCollapse}>
           <h3 className="collapse_title">{title}</h3>
-          <button className="collapse_arrow" onClick={this.toggleCollapse}>
+          <button className="collapse_arrow">
             {this.state.isOpen === true ? (
               <img src={topArrow} alt="chevron-top" />
             ) : (
